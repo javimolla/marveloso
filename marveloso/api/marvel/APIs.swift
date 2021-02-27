@@ -11,6 +11,8 @@ open class SwaggerClientAPI {
     public static var credential: URLCredential?
     public static var customHeaders: [String:String] = [:]
     public static var requestBuilderFactory: RequestBuilderFactory = AlamofireRequestBuilderFactory()
+    public static var publicKey = ""
+    public static var privateKey = ""
 }
 
 open class RequestBuilder<T> {
@@ -32,6 +34,8 @@ open class RequestBuilder<T> {
         self.headers = headers
 
         addHeaders(SwaggerClientAPI.customHeaders)
+        
+        addApiParameters()
     }
 
     open func addHeaders(_ aHeaders:[String:String]) {
@@ -52,6 +56,21 @@ open class RequestBuilder<T> {
     open func addCredential() -> Self {
         self.credential = SwaggerClientAPI.credential
         return self
+    }
+    
+    private func addApiParameters() {
+        if (self.parameters == nil) {
+            self.parameters = [:]
+        }
+        let ts = String(Date().currentTimeMillis())
+        self.parameters!["ts"] = ts
+        self.parameters!["hash"] = getApiHash(ts)
+        self.parameters!["apikey"] = SwaggerClientAPI.publicKey
+    }
+    
+    private func getApiHash(_ ts: String) -> String {
+        let toHash = ts + SwaggerClientAPI.privateKey + SwaggerClientAPI.publicKey
+        return toHash.md5()
     }
 }
 

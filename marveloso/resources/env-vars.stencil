@@ -1,0 +1,6 @@
+public struct EnvironmentVariables {
+	let marvelPublicKey: String
+	let marvelPrivateKey: String
+}
+
+public let environmentVariables = EnvironmentVariables(marvelPublicKey: "{{ argument.marvelPublicKey }}", marvelPrivateKey: "{{ argument.marvelPrivateKey }}")
