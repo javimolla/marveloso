@@ -69,6 +69,10 @@
 		7BC8A5E425EA51A4006B3C7F /* Date+Timemillis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A5E225EA51A4006B3C7F /* Date+Timemillis.swift */; };
 		7BC8A5F825EA520C006B3C7F /* env-vars.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 7BC8A5F725EA520C006B3C7F /* env-vars.stencil */; };
 		7BC8A5FD25EA5B7E006B3C7F /* env-vars.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A5FC25EA5B7E006B3C7F /* env-vars.generated.swift */; };
+		7BC8A62225EA6A7F006B3C7F /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62025EA6A7F006B3C7F /* CharacterDetail.swift */; };
+		7BC8A62325EA6A7F006B3C7F /* CharacterSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62125EA6A7F006B3C7F /* CharacterSimple.swift */; };
+		7BC8A62825EA6A85006B3C7F /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62725EA6A85006B3C7F /* MarvelService.swift */; };
+		7BC8A62D25EA6ACD006B3C7F /* marvelServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */; };
 		8FD7ADFF309F4FF97903BCAE /* Pods_marveloso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */; };
 		AF88F5AAEB758BC5EA57430C /* Pods_marveloso_marvelosoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -164,6 +168,10 @@
 		7BC8A5F725EA520C006B3C7F /* env-vars.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "env-vars.stencil"; sourceTree = "<group>"; };
 		7BC8A5FC25EA5B7E006B3C7F /* env-vars.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "env-vars.generated.swift"; sourceTree = "<group>"; };
 		7BC8A61625EA678B006B3C7F /* marveloso.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = marveloso.xctestplan; sourceTree = "<group>"; };
+		7BC8A62025EA6A7F006B3C7F /* CharacterDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
+		7BC8A62125EA6A7F006B3C7F /* CharacterSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSimple.swift; sourceTree = "<group>"; };
+		7BC8A62725EA6A85006B3C7F /* MarvelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
+		7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelServiceTests.swift; sourceTree = "<group>"; };
 		80A0EF308E774725E445A203 /* Pods-marveloso-marvelosoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.debug.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A80B9D9BC442B7D89C9DE8B3 /* Pods-marveloso-marvelosoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.release.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEBBF52DA38D7751B7097405 /* Pods_marvelosoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelosoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,9 +247,10 @@
 		7B0F648E25EA2B460024CAB1 /* marvelosoTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B0F648F25EA2B460024CAB1 /* marvelPublicAPITests.swift */,
-				7BC8A61625EA678B006B3C7F /* marveloso.xctestplan */,
 				7B0F649125EA2B460024CAB1 /* Info.plist */,
+				7BC8A61625EA678B006B3C7F /* marveloso.xctestplan */,
+				7B0F648F25EA2B460024CAB1 /* marvelPublicAPITests.swift */,
+				7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */,
 			);
 			path = marvelosoTests;
 			sourceTree = "<group>";
@@ -309,6 +318,7 @@
 		7BC8A54125EA474B006B3C7F /* service */ = {
 			isa = PBXGroup;
 			children = (
+				7BC8A62725EA6A85006B3C7F /* MarvelService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -342,6 +352,8 @@
 		7BC8A54525EA474C006B3C7F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7BC8A62025EA6A7F006B3C7F /* CharacterDetail.swift */,
+				7BC8A62125EA6A7F006B3C7F /* CharacterSimple.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -687,6 +699,7 @@
 				7BC8A5BA25EA508B006B3C7F /* Comic.swift in Sources */,
 				7BC8A5BE25EA508B006B3C7F /* SeriesList.swift in Sources */,
 				7BC8A5C025EA508B006B3C7F /* ComicDataContainer.swift in Sources */,
+				7BC8A62825EA6A85006B3C7F /* MarvelService.swift in Sources */,
 				7BC8A5C525EA508B006B3C7F /* CharacterDataContainer.swift in Sources */,
 				7BC8A5D025EA508B006B3C7F /* TextObject.swift in Sources */,
 				7BC8A5AA25EA508B006B3C7F /* JSONValue.swift in Sources */,
@@ -705,6 +718,7 @@
 				7BC8A5C225EA508B006B3C7F /* CharacterSummary.swift in Sources */,
 				7BC8A5B725EA508B006B3C7F /* StoryDataWrapper.swift in Sources */,
 				7BC8A5CB25EA508B006B3C7F /* EventDataWrapper.swift in Sources */,
+				7BC8A62225EA6A7F006B3C7F /* CharacterDetail.swift in Sources */,
 				7BC8A5B525EA508B006B3C7F /* Event.swift in Sources */,
 				7BC8A5C425EA508B006B3C7F /* ComicDataWrapper.swift in Sources */,
 				7BC8A5FD25EA5B7E006B3C7F /* env-vars.generated.swift in Sources */,
@@ -737,6 +751,7 @@
 				7BC8A5CA25EA508B006B3C7F /* Story.swift in Sources */,
 				7BC8A5D425EA508B006B3C7F /* Models.swift in Sources */,
 				7BC8A5E425EA51A4006B3C7F /* Date+Timemillis.swift in Sources */,
+				7BC8A62325EA6A7F006B3C7F /* CharacterSimple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC8A62D25EA6ACD006B3C7F /* marvelServiceTests.swift in Sources */,
 				7B0F649025EA2B460024CAB1 /* marvelPublicAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
