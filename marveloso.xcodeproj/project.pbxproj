@@ -116,13 +116,15 @@
 		7B0F647725EA2B430024CAB1 /* marveloso */ = {
 			isa = PBXGroup;
 			children = (
-				7B0F647825EA2B430024CAB1 /* AppDelegate.swift */,
-				7B0F647A25EA2B430024CAB1 /* SceneDelegate.swift */,
-				7B0F647C25EA2B430024CAB1 /* ViewController.swift */,
-				7B0F647E25EA2B430024CAB1 /* Main.storyboard */,
-				7B0F648125EA2B450024CAB1 /* Assets.xcassets */,
-				7B0F648325EA2B450024CAB1 /* LaunchScreen.storyboard */,
-				7B0F648625EA2B450024CAB1 /* Info.plist */,
+				7BC8A53E25EA474B006B3C7F /* api */,
+				7BC8A54425EA474C006B3C7F /* delegate */,
+				7BC8A54325EA474C006B3C7F /* extensions */,
+				7BC8A54525EA474C006B3C7F /* model */,
+				7BC8A54225EA474C006B3C7F /* presenter */,
+				7BC8A53F25EA474B006B3C7F /* resources */,
+				7BC8A54125EA474B006B3C7F /* service */,
+				7BC8A53A25EA46F3006B3C7F /* storyboard */,
+				7BC8A54025EA474B006B3C7F /* view */,
 			);
 			path = marveloso;
 			sourceTree = "<group>";
@@ -155,8 +157,77 @@
 				EF06E939BBC5C15011358853 /* Pods-marvelosoTests.debug.xcconfig */,
 				6CB1165D0E109E8DB69E834E /* Pods-marvelosoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7BC8A53A25EA46F3006B3C7F /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F648325EA2B450024CAB1 /* LaunchScreen.storyboard */,
+				7B0F647E25EA2B430024CAB1 /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		7BC8A53E25EA474B006B3C7F /* api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		7BC8A53F25EA474B006B3C7F /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F648125EA2B450024CAB1 /* Assets.xcassets */,
+				7B0F648625EA2B450024CAB1 /* Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		7BC8A54025EA474B006B3C7F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F647C25EA2B430024CAB1 /* ViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7BC8A54125EA474B006B3C7F /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		7BC8A54225EA474C006B3C7F /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		7BC8A54325EA474C006B3C7F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		7BC8A54425EA474C006B3C7F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F647825EA2B430024CAB1 /* AppDelegate.swift */,
+				7B0F647A25EA2B430024CAB1 /* SceneDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		7BC8A54525EA474C006B3C7F /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		D1D8B61D09B0C9033EA03CAB /* Frameworks */ = {
@@ -551,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = marveloso/Info.plist;
+				INFOPLIST_FILE = marveloso/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,7 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = marveloso/Info.plist;
+				INFOPLIST_FILE = marveloso/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
