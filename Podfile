@@ -7,6 +7,7 @@ target 'marveloso' do
 
   # Pods for marveloso
   pod 'Alamofire', '~> 4.0'
+  pod 'SDWebImage', '~> 5.0'
   pod 'Sourcery'
   pod 'SwiftyGif'
 
