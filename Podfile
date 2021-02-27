@@ -6,6 +6,7 @@ target 'marveloso' do
   use_frameworks!
 
   # Pods for marveloso
+  pod 'SwiftyGif'
 
   target 'marvelosoTests' do
     inherit! :search_paths

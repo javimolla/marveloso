@@ -251,6 +251,7 @@
 				7B0F647125EA2B430024CAB1 /* Sources */,
 				7B0F647225EA2B430024CAB1 /* Frameworks */,
 				7B0F647325EA2B430024CAB1 /* Resources */,
+				4A36D77255DAE081127DFABF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +289,7 @@
 				7B0F649225EA2B460024CAB1 /* Sources */,
 				7B0F649325EA2B460024CAB1 /* Frameworks */,
 				7B0F649425EA2B460024CAB1 /* Resources */,
+				DB7421C3C46A64C27EDD342B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +413,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A36D77255DAE081127DFABF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso/Pods-marveloso-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso/Pods-marveloso-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marveloso/Pods-marveloso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7421C3C46A64C27EDD342B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE4F6EF835A53BB397793F9F /* [CP] Check Pods Manifest.lock */ = {
