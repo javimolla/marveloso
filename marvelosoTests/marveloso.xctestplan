@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "14A7394B-AA1A-4455-B69C-4B5EDD5601AD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:marveloso.xcodeproj",
+        "identifier" : "7B0F648A25EA2B460024CAB1",
+        "name" : "marvelosoTests"
+      }
+    }
+  ],
+  "version" : 1
+}
