@@ -6,6 +6,8 @@ target 'marveloso' do
   use_frameworks!
 
   # Pods for marveloso
+  pod 'Alamofire', '~> 4.0'
+  pod 'Sourcery'
   pod 'SwiftyGif'
 
   target 'marvelosoTests' do

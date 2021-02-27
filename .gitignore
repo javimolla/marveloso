@@ -90,7 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Sourcery
-.generated.swift
+*.generated.swift
 
 # Custom environment variables
 env-vars.sh
