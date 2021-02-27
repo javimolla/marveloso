@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  marveloso
 //
-//  Created by liver6 on 27/02/2021.
+//  Created by javimolla on 27/02/2021.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  String+Crypto.swift
 //  marveloso
 //
-//  Created by liver6 on 24/02/2021.
+//  Created by javimolla on 24/02/2021.
 //
 
 import Foundation
