@@ -10,13 +10,15 @@
 		114021828FEA05DA32A27962 /* Pods_marvelosoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBBF52DA38D7751B7097405 /* Pods_marvelosoTests.framework */; };
 		7B0F647925EA2B430024CAB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F647825EA2B430024CAB1 /* AppDelegate.swift */; };
 		7B0F647B25EA2B430024CAB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F647A25EA2B430024CAB1 /* SceneDelegate.swift */; };
-		7B0F647D25EA2B430024CAB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F647C25EA2B430024CAB1 /* ViewController.swift */; };
 		7B0F648025EA2B430024CAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F647E25EA2B430024CAB1 /* Main.storyboard */; };
 		7B0F648225EA2B450024CAB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F648125EA2B450024CAB1 /* Assets.xcassets */; };
 		7B0F648525EA2B450024CAB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F648325EA2B450024CAB1 /* LaunchScreen.storyboard */; };
 		7B0F649025EA2B460024CAB1 /* marvelosoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F648F25EA2B460024CAB1 /* marvelosoTests.swift */; };
 		7B0F649B25EA2B460024CAB1 /* marvelosoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */; };
 		7BC8A55725EA4CC3006B3C7F /* Marveloso.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7BC8A55625EA4CC3006B3C7F /* Marveloso.gif */; };
+		7BC8A56025EA4D86006B3C7F /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */; };
+		7BC8A56125EA4D86006B3C7F /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A55F25EA4D86006B3C7F /* CharactersViewController.swift */; };
+		7BC8A56625EA4D95006B3C7F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A56525EA4D95006B3C7F /* UIView+Constraints.swift */; };
 		8FD7ADFF309F4FF97903BCAE /* Pods_marveloso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */; };
 		AF88F5AAEB758BC5EA57430C /* Pods_marveloso_marvelosoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +49,6 @@
 		7B0F647525EA2B430024CAB1 /* marveloso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marveloso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0F647825EA2B430024CAB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B0F647A25EA2B430024CAB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B0F647C25EA2B430024CAB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B0F647F25EA2B430024CAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B0F648125EA2B450024CAB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B0F648425EA2B450024CAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelosoUITests.swift; sourceTree = "<group>"; };
 		7B0F649C25EA2B460024CAB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC8A55625EA4CC3006B3C7F /* Marveloso.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Marveloso.gif; sourceTree = "<group>"; };
+		7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		7BC8A55F25EA4D86006B3C7F /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		7BC8A56525EA4D95006B3C7F /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		80A0EF308E774725E445A203 /* Pods-marveloso-marvelosoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.debug.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A80B9D9BC442B7D89C9DE8B3 /* Pods-marveloso-marvelosoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.release.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEBBF52DA38D7751B7097405 /* Pods_marvelosoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelosoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,7 +195,8 @@
 		7BC8A54025EA474B006B3C7F /* view */ = {
 			isa = PBXGroup;
 			children = (
-				7B0F647C25EA2B430024CAB1 /* ViewController.swift */,
+				7BC8A55F25EA4D86006B3C7F /* CharactersViewController.swift */,
+				7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		7BC8A54325EA474C006B3C7F /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7BC8A56525EA4D95006B3C7F /* UIView+Constraints.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -482,9 +488,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0F647D25EA2B430024CAB1 /* ViewController.swift in Sources */,
+				7BC8A56125EA4D86006B3C7F /* CharactersViewController.swift in Sources */,
 				7B0F647925EA2B430024CAB1 /* AppDelegate.swift in Sources */,
+				7BC8A56625EA4D95006B3C7F /* UIView+Constraints.swift in Sources */,
 				7B0F647B25EA2B430024CAB1 /* SceneDelegate.swift in Sources */,
+				7BC8A56025EA4D86006B3C7F /* LogoAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
