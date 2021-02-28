@@ -10,7 +10,7 @@ import SwiftyGif
 
 protocol CharactersView: class {
     func onCharactersRetrieved(_ characters: [CharacterSimple], _ total: Int)
-    func onError(_ error: MarvelService.MarvelServiceError)
+    func onError(_ error: MarvelServiceError)
 }
 
 class CharactersViewController: UIViewController {
@@ -46,7 +46,7 @@ class CharactersViewController: UIViewController {
     
     private func setupPresenter() {
         if (presenter == nil) {
-            presenter = CharactersPresenter(self)
+            presenter = CharactersPresenter(view: self)
         }
         loadCharacters()
     }
@@ -83,7 +83,7 @@ class CharactersViewController: UIViewController {
         tableView.isHidden = true
     }
     
-    private func showError(_ error: MarvelService.MarvelServiceError) {
+    private func showError(_ error: MarvelServiceError) {
         let uialert = UIAlertController(title: "Error obteniendo los personajes",
                                         message: error.localizedDescription,
                                         preferredStyle: UIAlertController.Style.alert)
@@ -121,7 +121,7 @@ extension CharactersViewController: CharactersView {
         }
     }
     
-    func onError(_ error: MarvelService.MarvelServiceError) {
+    func onError(_ error: MarvelServiceError) {
         DispatchQueue.main.async {
             self.isFetchInProgress = false
             self.showError(error)

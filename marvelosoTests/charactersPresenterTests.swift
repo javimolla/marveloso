@@ -19,7 +19,7 @@ class charactersPresenterTests: XCTestCase {
     }
 
     func testGetSomeCharacters() throws {
-        let presenter = CharactersPresenter(self)
+        let presenter = CharactersPresenter(view: self, marvelService: MockMarvelService())
         presenter.loadCharacters(0)
         wait(for: [self.expectation!], timeout: 10.0)
     }
@@ -38,8 +38,23 @@ extension charactersPresenterTests: CharactersView {
         self.expectation!.fulfill()
     }
     
-    func onError(_ error: MarvelService.MarvelServiceError) {
+    func onError(_ error: MarvelServiceError) {
         XCTAssertNil(error)
         self.expectation!.fulfill()
+    }
+}
+
+class MockMarvelService: MarvelService {
+    func getCharactersSimple(_ offset: Int,
+                                      _ completion: @escaping ((_ characters: [CharacterSimple]?,
+                                                                _ totalCharacters: Int?,
+                                                                _ error: MarvelServiceError?) -> Void)) {
+        completion([CharacterSimple(id: 1, name: "name", thumbnail: "thumbnail")], 100, nil)
+    }
+    
+    func getCharacterDetail(_ id: Int,
+                            _ completion: @escaping ((_ character: CharacterDetail?,
+                                                      _ error: MarvelServiceError?) -> Void)) {
+        // Not used
     }
 }

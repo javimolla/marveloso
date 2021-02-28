@@ -20,9 +20,9 @@ class marvelServiceTests: XCTestCase {
     func testGetSomeCharacters() throws {
         let expectation = XCTestExpectation(description: "Obtener los datos de algunos personajes")
         
-        MarvelService().getCharactersSimple(0) { (characters: [CharacterSimple]?,
+        MarvelServiceImpl().getCharactersSimple(0) { (characters: [CharacterSimple]?,
                                                   totalCharacters: Int?,
-                                                  error: MarvelService.MarvelServiceError?) in
+                                                  error: MarvelServiceError?) in
             XCTAssertNil(error)
             XCTAssertGreaterThan(totalCharacters!, characters!.count)
             
@@ -36,8 +36,8 @@ class marvelServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Obtener los datos de un personaje")
         
         let id = 1011334
-        MarvelService().getCharacterDetail(id) { (character: CharacterDetail?,
-                                                  error: MarvelService.MarvelServiceError?) in
+        MarvelServiceImpl().getCharacterDetail(id) { (character: CharacterDetail?,
+                                                  error: MarvelServiceError?) in
             XCTAssertNil(error)
             XCTAssertNotNil(character)
             
