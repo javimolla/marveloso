@@ -16,7 +16,7 @@ class CharactersPresenter: CharactersViewPresenter {
     
     let marvelService = MarvelService()
     
-    required init(view: CharactersView) {
+    required init(_ view: CharactersView) {
         self.view = view
     }
     

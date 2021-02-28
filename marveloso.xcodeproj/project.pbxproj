@@ -17,6 +17,7 @@
 		7B0F649B25EA2B460024CAB1 /* marvelosoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */; };
 		7B9D4EF025EAA6F000FA146A /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */; };
 		7B9D4EF525EAA6F900FA146A /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */; };
+		7B9D4F0E25EB8FAE00FA146A /* charactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4F0D25EB8FAE00FA146A /* charactersPresenterTests.swift */; };
 		7BC8A55725EA4CC3006B3C7F /* Marveloso.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7BC8A55625EA4CC3006B3C7F /* Marveloso.gif */; };
 		7BC8A56025EA4D86006B3C7F /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */; };
 		7BC8A56125EA4D86006B3C7F /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A55F25EA4D86006B3C7F /* CharactersViewController.swift */; };
@@ -117,6 +118,7 @@
 		7B0F649C25EA2B460024CAB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersPresenter.swift; sourceTree = "<group>"; };
+		7B9D4F0D25EB8FAE00FA146A /* charactersPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charactersPresenterTests.swift; sourceTree = "<group>"; };
 		7BC8A55625EA4CC3006B3C7F /* Marveloso.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Marveloso.gif; sourceTree = "<group>"; };
 		7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		7BC8A55F25EA4D86006B3C7F /* CharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				7BC8A61625EA678B006B3C7F /* marveloso.xctestplan */,
 				7B0F648F25EA2B460024CAB1 /* marvelPublicAPITests.swift */,
 				7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */,
+				7B9D4F0D25EB8FAE00FA146A /* charactersPresenterTests.swift */,
 			);
 			path = marvelosoTests;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC8A62D25EA6ACD006B3C7F /* marvelServiceTests.swift in Sources */,
+				7B9D4F0E25EB8FAE00FA146A /* charactersPresenterTests.swift in Sources */,
 				7B0F649025EA2B460024CAB1 /* marvelPublicAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
