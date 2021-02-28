@@ -15,6 +15,7 @@
 		7B0F648525EA2B450024CAB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0F648325EA2B450024CAB1 /* LaunchScreen.storyboard */; };
 		7B0F649025EA2B460024CAB1 /* marvelPublicAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F648F25EA2B460024CAB1 /* marvelPublicAPITests.swift */; };
 		7B0F649B25EA2B460024CAB1 /* marvelosoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */; };
+		7B1999C525EC151A00FF6D00 /* MarvelServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1999C425EC151A00FF6D00 /* MarvelServiceImpl.swift */; };
 		7B9D4EF025EAA6F000FA146A /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */; };
 		7B9D4EF525EAA6F900FA146A /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */; };
 		7B9D4F0E25EB8FAE00FA146A /* charactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4F0D25EB8FAE00FA146A /* charactersPresenterTests.swift */; };
@@ -116,6 +117,7 @@
 		7B0F649625EA2B460024CAB1 /* marvelosoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelosoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelosoUITests.swift; sourceTree = "<group>"; };
 		7B0F649C25EA2B460024CAB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B1999C425EC151A00FF6D00 /* MarvelServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelServiceImpl.swift; sourceTree = "<group>"; };
 		7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersPresenter.swift; sourceTree = "<group>"; };
 		7B9D4F0D25EB8FAE00FA146A /* charactersPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charactersPresenterTests.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC8A62725EA6A85006B3C7F /* MarvelService.swift */,
+				7B1999C425EC151A00FF6D00 /* MarvelServiceImpl.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				7BC8A5AC25EA508B006B3C7F /* CodableHelper.swift in Sources */,
 				7BC8A5B325EA508B006B3C7F /* Creator.swift in Sources */,
 				7BC8A5C625EA508B006B3C7F /* Url.swift in Sources */,
+				7B1999C525EC151A00FF6D00 /* MarvelServiceImpl.swift in Sources */,
 				7BC8A5AE25EA508B006B3C7F /* APIs.swift in Sources */,
 				7BC8A5B125EA508B006B3C7F /* CreatorList.swift in Sources */,
 				7BC8A5C925EA508B006B3C7F /* StoryDataContainer.swift in Sources */,
