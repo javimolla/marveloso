@@ -2,7 +2,7 @@
 //  CharactersViewController.swift
 //  marveloso
 //
-//  Created by liver6 on 13/02/2021.
+//  Created by javimolla on 13/02/2021.
 //
 
 import UIKit
