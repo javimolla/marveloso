@@ -2,7 +2,7 @@
 //  CharactersViewController.swift
 //  marveloso
 //
-//  Created by liver6 on 13/02/2021.
+//  Created by javimolla on 13/02/2021.
 //
 
 import UIKit
@@ -16,6 +16,7 @@ protocol CharactersView: class {
 class CharactersViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyList: UIImageView!
     let logoAnimationView = LogoAnimationView()
     var presenter: CharactersViewPresenter!
     var characters: [CharacterSimple] = []
@@ -28,16 +29,13 @@ class CharactersViewController: UIViewController {
         setupSpinner()
         setupPresenter()
         setupCharactersList()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showAnimation()
+        setupEmptyList()
     }
     
     private func setupAnimation() {
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
+        showAnimation()
     }
     
     private func setupSpinner() {
@@ -54,6 +52,13 @@ class CharactersViewController: UIViewController {
     private func setupCharactersList() {
         tableView.dataSource = self
         tableView.prefetchDataSource = self
+    }
+    
+    private func setupEmptyList() {
+        hideEmptyList()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emptyListTapped(tapGestureRecognizer:)))
+        emptyList.isUserInteractionEnabled = true
+        emptyList.addGestureRecognizer(tapGestureRecognizer)
     }
     
     private func showAnimation() {
@@ -83,11 +88,23 @@ class CharactersViewController: UIViewController {
         tableView.isHidden = true
     }
     
+    private func showEmptyList() {
+        emptyList.isHidden = false
+    }
+    
+    private func hideEmptyList() {
+        emptyList.isHidden = true
+    }
+    
     private func showError(_ error: MarvelService.MarvelServiceError) {
         let uialert = UIAlertController(title: "Error obteniendo los personajes",
                                         message: error.localizedDescription,
                                         preferredStyle: UIAlertController.Style.alert)
-        uialert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil))
+        uialert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: { (UIAlertAction) in
+            self.hideAnimation()
+            self.hideCharactersList()
+            self.showEmptyList()
+        }))
         uialert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
             if (self.totalCharacters == 0) {
                 self.showAnimation()
@@ -101,6 +118,13 @@ class CharactersViewController: UIViewController {
         let startIndex = characters.count - newCharacters.count
         let endIndex = startIndex + newCharacters.count
         return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
+    }
+    
+    @objc func emptyListTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.hideEmptyList()
+        self.showAnimation()
+        self.loadCharacters()
     }
 }
 
