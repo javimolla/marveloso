@@ -22,7 +22,7 @@ class marvelServiceTests: XCTestCase {
         
         MarvelService().getCharactersSimple(0) { (characters: [CharacterSimple]?,
                                                   totalCharacters: Int?,
-                                                  error: MarvelService.MarvelServiceError?) in
+                                                  error: String?) in
             XCTAssertNil(error)
             XCTAssertGreaterThan(totalCharacters!, characters!.count)
             
@@ -37,7 +37,7 @@ class marvelServiceTests: XCTestCase {
         
         let id = 1011334
         MarvelService().getCharacterDetail(id) { (character: CharacterDetail?,
-                                                  error: MarvelService.MarvelServiceError?) in
+                                                  error: String?) in
             XCTAssertNil(error)
             XCTAssertNotNil(character)
             

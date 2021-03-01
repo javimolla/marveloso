@@ -10,7 +10,7 @@ import SwiftyGif
 
 class LogoAnimationView: UIView {
     let logoGifImageView: UIImageView = {
-        guard let gifImage = try? UIImage(gifName: "Marveloso") else {
+        guard let gifImage = try? UIImage(gifName: "Marvel") else {
             return UIImageView()
         }
         return UIImageView(gifImage: gifImage, loopCount: -1)

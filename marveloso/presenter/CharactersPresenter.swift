@@ -23,7 +23,7 @@ class CharactersPresenter: CharactersViewPresenter {
     func loadCharacters(_ first: Int) {
         self.marvelService.getCharactersSimple(first) { (characters: [CharacterSimple]?,
                                                          totalCharacters: Int?,
-                                                         error: MarvelService.MarvelServiceError?) in
+                                                         error: String?) in
             if (error == nil) {
                 self.view?.onCharactersRetrieved(characters!, totalCharacters!)
             } else {

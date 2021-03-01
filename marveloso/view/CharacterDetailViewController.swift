@@ -10,7 +10,7 @@ import SDWebImage
 
 protocol CharacterDetailView: class {
     func onCharacterRetrieved(_ character: CharacterDetail)
-    func onError(_ error: MarvelService.MarvelServiceError)
+    func onError(_ error: String)
 }
 
 class CharacterDetailViewController: UIViewController {
@@ -55,9 +55,9 @@ class CharacterDetailViewController: UIViewController {
         spinner.stopAnimating()
     }
     
-    private func showError(_ error: MarvelService.MarvelServiceError) {
+    private func showError(_ error: String) {
         let uialert = UIAlertController(title: "Error obteniendo el personaje",
-                                        message: error.localizedDescription,
+                                        message: error,
                                         preferredStyle: UIAlertController.Style.alert)
         uialert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil))
         uialert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
@@ -84,7 +84,7 @@ extension CharacterDetailViewController: CharacterDetailView {
         hideAnimation()
     }
     
-    func onError(_ error: MarvelService.MarvelServiceError) {
+    func onError(_ error: String) {
         self.showError(error)
         self.hideAnimation()
     }

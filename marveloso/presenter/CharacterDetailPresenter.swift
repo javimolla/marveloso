@@ -22,7 +22,7 @@ class CharacterDetailPresenter: CharacterDetailViewPresenter {
     
     func loadCharacter(_ id: Int) {
         self.marvelService.getCharacterDetail(id) { (character: CharacterDetail?,
-                                                     error: MarvelService.MarvelServiceError?) in
+                                                     error: String?) in
             if (error == nil) {
                 self.view?.onCharacterRetrieved(character!)
             } else {
