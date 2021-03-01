@@ -8,12 +8,6 @@
 import Foundation
 
 class MarvelService: NSObject {
-    enum MarvelServiceError: Error {
-        case apiDown
-        case nothingFound
-        case unexpected(_ localizedDescription: String?)
-    }
-    
     override init() {
         SwaggerClientAPI.publicKey = environmentVariables.marvelPublicKey
         SwaggerClientAPI.privateKey = environmentVariables.marvelPrivateKey
@@ -22,7 +16,7 @@ class MarvelService: NSObject {
     func getCharactersSimple(_ offset: Int,
                              _ completion: @escaping ((_ characters: [CharacterSimple]?,
                                                        _ totalCharacters: Int?,
-                                                       _ error: MarvelServiceError?) -> Void)) {
+                                                       _ error: String?) -> Void)) {
         PublicAPI.getCreatorCollection(limit: 100, offset: offset) { (data: CharacterDataWrapper?,
                                                                       error: Error?) in
             if (error != nil) {
@@ -36,7 +30,7 @@ class MarvelService: NSObject {
     
     func getCharacterDetail(_ id: Int,
                             _ completion: @escaping ((_ character: CharacterDetail?,
-                                                      _ error: MarvelServiceError?) -> Void)) {
+                                                      _ error: String?) -> Void)) {
         PublicAPI.getCharacterIndividual(characterId: id) { (data: CharacterDataWrapper?,
                                                              error: Error?) in
             if (error != nil) {
@@ -48,8 +42,19 @@ class MarvelService: NSObject {
         }
     }
     
-    private func getError(_ error: Error) -> MarvelServiceError {
-        return MarvelServiceError.unexpected(error.localizedDescription)
+    private func getError(_ error: Error) -> String {
+        if let err = error as? ErrorResponse {
+            switch (err) {
+            case .error(409, _, let error):
+                return error.localizedDescription
+            case .error(500, _, let error):
+                return error.localizedDescription
+            default:
+                return "Error inesperado al llamar a la API de Marvel"
+            }
+        } else {
+            return "Error inesperado al llamar a la API de Marvel"
+        }
     }
     
     private func mapCharactersSimple(_ data: CharacterDataContainer) -> [CharacterSimple] {

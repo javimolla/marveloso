@@ -2,7 +2,7 @@
 //  CharactersPresenter.swift
 //  marveloso
 //
-//  Created by liver6 on 25/02/2021.
+//  Created by javimolla on 25/02/2021.
 //
 
 import Foundation
@@ -23,7 +23,7 @@ class CharactersPresenter: CharactersViewPresenter {
     func loadCharacters(_ first: Int) {
         self.marvelService.getCharactersSimple(first) { (characters: [CharacterSimple]?,
                                                          totalCharacters: Int?,
-                                                         error: MarvelService.MarvelServiceError?) in
+                                                         error: String?) in
             if (error == nil) {
                 self.view?.onCharactersRetrieved(characters!, totalCharacters!)
             } else {
