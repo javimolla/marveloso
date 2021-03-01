@@ -2,7 +2,7 @@
 //  CharacterCellView.swift
 //  marveloso
 //
-//  Created by liver6 on 25/02/2021.
+//  Created by javimolla on 25/02/2021.
 //
 
 import UIKit

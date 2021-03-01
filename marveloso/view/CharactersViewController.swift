@@ -2,7 +2,7 @@
 //  CharactersViewController.swift
 //  marveloso
 //
-//  Created by liver6 on 13/02/2021.
+//  Created by javimolla on 13/02/2021.
 //
 
 import UIKit
@@ -52,6 +52,7 @@ class CharactersViewController: UIViewController {
     }
     
     private func setupCharactersList() {
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.prefetchDataSource = self
     }
@@ -102,6 +103,12 @@ class CharactersViewController: UIViewController {
         let endIndex = startIndex + newCharacters.count
         return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
+    
+    @IBSegueAction func showDetail(_ coder: NSCoder) -> CharacterDetailViewController? {
+        let controller = CharacterDetailViewController(coder: coder)
+        controller?.id = characters[tableView.indexPathForSelectedRow?.row ?? 0].id;
+        return controller
+    }
 }
 
 extension CharactersViewController: CharactersView {
@@ -139,6 +146,12 @@ extension CharactersViewController: UITableViewDataSourcePrefetching {
         if (indexPaths.contains(where: isLoadingCell)) {
             loadCharacters()
         }
+    }
+}
+
+extension CharactersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueDetail", sender: self)
     }
 }
 
