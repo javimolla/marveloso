@@ -14,7 +14,7 @@ protocol CharactersViewPresenter: class {
 class CharactersPresenter: CharactersViewPresenter {
     weak var view: CharactersView?
     
-    let marvelService = MarvelService()
+    let marvelService = DIResolver.getMarvelService()
     
     required init(view: CharactersView) {
         self.view = view
