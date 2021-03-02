@@ -43,7 +43,7 @@ class CharactersViewController: UIViewController {
     }
     
     private func setupPresenter() {
-        presenter = DIResolver.getCharactersPresenter(view: self)
+        presenter = CharactersPresenter(view: self)
         loadCharacters()
     }
     
