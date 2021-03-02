@@ -14,15 +14,16 @@ protocol CharacterDetailViewPresenter: class {
 class CharacterDetailPresenter: CharacterDetailViewPresenter {
     weak var view: CharacterDetailView?
     
-    let marvelService = MarvelService()
+    let marvelService: MarvelService?
     
     required init(view: CharacterDetailView) {
         self.view = view
+        self.marvelService = DIResolver.getMarvelService()
     }
     
     func loadCharacter(_ id: Int) {
-        self.marvelService.getCharacterDetail(id) { (character: CharacterDetail?,
-                                                     error: String?) in
+        marvelService!.getCharacterDetail(id) { (character: CharacterDetail?,
+                                                 error: String?) in
             if (error == nil) {
                 self.view?.onCharacterRetrieved(character!)
             } else {

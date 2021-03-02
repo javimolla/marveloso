@@ -20,7 +20,7 @@ class marvelServiceTests: XCTestCase {
     func testGetSomeCharacters() throws {
         let expectation = XCTestExpectation(description: "Obtener los datos de algunos personajes")
         
-        MarvelService().getCharactersSimple(0) { (characters: [CharacterSimple]?,
+        DIResolver.getMarvelService().getCharactersSimple(0) { (characters: [CharacterSimple]?,
                                                   totalCharacters: Int?,
                                                   error: String?) in
             XCTAssertNil(error)
@@ -36,7 +36,7 @@ class marvelServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Obtener los datos de un personaje")
         
         let id = 1011334
-        MarvelService().getCharacterDetail(id) { (character: CharacterDetail?,
+        DIResolver.getMarvelService().getCharacterDetail(id) { (character: CharacterDetail?,
                                                   error: String?) in
             XCTAssertNil(error)
             XCTAssertNotNil(character)
