@@ -77,7 +77,7 @@
 		7BC8A62825EA6A85006B3C7F /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62725EA6A85006B3C7F /* MarvelService.swift */; };
 		7BC8A62D25EA6ACD006B3C7F /* marvelServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */; };
 		7BE6213125ED3C6200BF2BBE /* Marvel.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7BE6213025ED3C6200BF2BBE /* Marvel.gif */; };
-		7BE6215425ED673500BF2BBE /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215325ED673500BF2BBE /* DIResolver.swift */; };
+		7BE6215425ED673500BF2BBE /* ServiceResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215325ED673500BF2BBE /* ServiceResolver.swift */; };
 		7BE6215925ED681700BF2BBE /* MarvelServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215825ED681700BF2BBE /* MarvelServiceImpl.swift */; };
 		7BE6216825EE055600BF2BBE /* charactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */; };
 		8FD7ADFF309F4FF97903BCAE /* Pods_marveloso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */; };
@@ -183,7 +183,7 @@
 		7BC8A62725EA6A85006B3C7F /* MarvelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelServiceTests.swift; sourceTree = "<group>"; };
 		7BE6213025ED3C6200BF2BBE /* Marvel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Marvel.gif; sourceTree = "<group>"; };
-		7BE6215325ED673500BF2BBE /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
+		7BE6215325ED673500BF2BBE /* ServiceResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResolver.swift; sourceTree = "<group>"; };
 		7BE6215825ED681700BF2BBE /* MarvelServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelServiceImpl.swift; sourceTree = "<group>"; };
 		7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = charactersPresenterTests.swift; sourceTree = "<group>"; };
 		80A0EF308E774725E445A203 /* Pods-marveloso-marvelosoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.debug.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 		7BE6215D25EE036E00BF2BBE /* resolver */ = {
 			isa = PBXGroup;
 			children = (
-				7BE6215325ED673500BF2BBE /* DIResolver.swift */,
+				7BE6215325ED673500BF2BBE /* ServiceResolver.swift */,
 			);
 			path = resolver;
 			sourceTree = "<group>";
@@ -742,7 +742,7 @@
 				7BC8A5CC25EA508B006B3C7F /* ModelCharacter.swift in Sources */,
 				7BC8A5C125EA508B006B3C7F /* EventList.swift in Sources */,
 				7BC8A5BF25EA508B006B3C7F /* EventDataContainer.swift in Sources */,
-				7BE6215425ED673500BF2BBE /* DIResolver.swift in Sources */,
+				7BE6215425ED673500BF2BBE /* ServiceResolver.swift in Sources */,
 				7BC8A5D325EA508B006B3C7F /* JSONEncodingHelper.swift in Sources */,
 				7BC8A5CF25EA508B006B3C7F /* StorySummary.swift in Sources */,
 				7BC8A5AF25EA508B006B3C7F /* CharacterDataWrapper.swift in Sources */,

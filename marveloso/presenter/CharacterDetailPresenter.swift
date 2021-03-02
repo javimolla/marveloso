@@ -18,7 +18,7 @@ class CharacterDetailPresenter: CharacterDetailViewPresenter {
     
     required init(view: CharacterDetailView) {
         self.view = view
-        self.marvelService = DIResolver.getMarvelService()
+        self.marvelService = ServiceResolver.getMarvelService()
     }
     
     func loadCharacter(_ id: Int) {

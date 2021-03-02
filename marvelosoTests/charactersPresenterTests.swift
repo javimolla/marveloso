@@ -12,7 +12,7 @@ class charactersPresenterTests: XCTestCase {
     var expectation: XCTestExpectation?
     
     override func setUpWithError() throws {
-        DIResolver.marvelService = MockMarvelService()
+        ServiceResolver.marvelService = MockMarvelService()
         expectation = XCTestExpectation(description: "Obtener los datos de algunos personajes")
     }
 
