@@ -79,6 +79,7 @@
 		7BE6213125ED3C6200BF2BBE /* Marvel.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7BE6213025ED3C6200BF2BBE /* Marvel.gif */; };
 		7BE6215425ED673500BF2BBE /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215325ED673500BF2BBE /* DIResolver.swift */; };
 		7BE6215925ED681700BF2BBE /* MarvelServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215825ED681700BF2BBE /* MarvelServiceImpl.swift */; };
+		7BE6216825EE055600BF2BBE /* charactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */; };
 		8FD7ADFF309F4FF97903BCAE /* Pods_marveloso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */; };
 		AF88F5AAEB758BC5EA57430C /* Pods_marveloso_marvelosoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -184,6 +185,7 @@
 		7BE6213025ED3C6200BF2BBE /* Marvel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Marvel.gif; sourceTree = "<group>"; };
 		7BE6215325ED673500BF2BBE /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
 		7BE6215825ED681700BF2BBE /* MarvelServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelServiceImpl.swift; sourceTree = "<group>"; };
+		7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = charactersPresenterTests.swift; sourceTree = "<group>"; };
 		80A0EF308E774725E445A203 /* Pods-marveloso-marvelosoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.debug.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A80B9D9BC442B7D89C9DE8B3 /* Pods-marveloso-marvelosoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-marvelosoUITests.release.xcconfig"; path = "Target Support Files/Pods-marveloso-marvelosoUITests/Pods-marveloso-marvelosoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEBBF52DA38D7751B7097405 /* Pods_marvelosoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marvelosoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			children = (
 				7B0F649125EA2B460024CAB1 /* Info.plist */,
 				7BC8A61625EA678B006B3C7F /* marveloso.xctestplan */,
+				7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */,
 				7B0F648F25EA2B460024CAB1 /* marvelPublicAPITests.swift */,
 				7BC8A62C25EA6ACD006B3C7F /* marvelServiceTests.swift */,
 			);
@@ -793,6 +796,7 @@
 			files = (
 				7BC8A62D25EA6ACD006B3C7F /* marvelServiceTests.swift in Sources */,
 				7B0F649025EA2B460024CAB1 /* marvelPublicAPITests.swift in Sources */,
+				7BE6216825EE055600BF2BBE /* charactersPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

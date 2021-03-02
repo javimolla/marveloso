@@ -9,8 +9,13 @@ import Foundation
 
 class DIResolver {
     static var marvelService: MarvelService?
+    static var charactersPresenter: CharactersViewPresenter?
     
     static func getMarvelService() -> MarvelService {
         return DIResolver.marvelService ?? MarvelServiceImpl()
+    }
+    
+    static func getCharactersPresenter(view: CharactersView) -> CharactersViewPresenter {
+        return DIResolver.charactersPresenter ?? CharactersPresenter(view: view)
     }
 }
