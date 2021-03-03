@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 protocol CharacterDetailView: class {
-    func onCharacterRetrieved(_ character: CharacterDetail)
+    func onCharacterRetrieved()
     func onError(_ error: String)
 }
 
@@ -20,7 +20,6 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var presenter: CharacterDetailViewPresenter!
-    var character: CharacterDetail? = nil
     var id: Int = 0
     
     override func viewDidLoad() {
@@ -34,9 +33,7 @@ class CharacterDetailViewController: UIViewController {
     }
 
     private func setupPresenter() {
-        if (presenter == nil) {
-            presenter = CharacterDetailPresenter(view: self)
-        }
+        presenter = CharacterDetailPresenter(view: self)
         loadCharacter()
     }
     
@@ -76,16 +73,15 @@ class CharacterDetailViewController: UIViewController {
 }
 
 extension CharacterDetailViewController: CharacterDetailView {
-    func onCharacterRetrieved(_ character: CharacterDetail) {
-        self.character = character
-        self.nameLabel.text = character.name
-        self.descriptionLabel.text = character.description
-        self.setImage(character.image)
+    func onCharacterRetrieved() {
+        nameLabel.text = presenter.getCharacter().name
+        descriptionLabel.text = presenter.getCharacter().description
+        setImage(presenter.getCharacter().image)
         hideAnimation()
     }
     
     func onError(_ error: String) {
-        self.showError(error)
-        self.hideAnimation()
+        showError(error)
+        hideAnimation()
     }
 }
