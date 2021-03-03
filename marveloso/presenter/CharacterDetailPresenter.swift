@@ -8,27 +8,38 @@
 import Foundation
 
 protocol CharacterDetailViewPresenter: class {
+    func getCharacter() -> CharacterDetail
     func loadCharacter(_ id: Int)
 }
 
 class CharacterDetailPresenter: CharacterDetailViewPresenter {
     weak var view: CharacterDetailView?
-    
-    let marvelService: MarvelService?
+    var character: CharacterDetail?
+    var isFetchInProgress = false
     
     required init(view: CharacterDetailView) {
         self.view = view
-        self.marvelService = ServiceResolver.getMarvelService()
+    }
+    
+    func getCharacter() -> CharacterDetail {
+        return character!
     }
     
     func loadCharacter(_ id: Int) {
-        marvelService!.getCharacterDetail(id) { (character: CharacterDetail?,
-                                                 error: String?) in
+        if (isFetchInProgress) {
+            return
+        }
+        
+        isFetchInProgress = true
+        ServiceResolver.getMarvelService().getCharacterDetail(id) { (character: CharacterDetail?,
+                                                                     error: String?) in
             if (error == nil) {
-                self.view?.onCharacterRetrieved(character!)
+                self.character = character!
+                self.view?.onCharacterRetrieved()
             } else {
                 self.view?.onError(error!)
             }
+            self.isFetchInProgress = false
         }
     }
 }

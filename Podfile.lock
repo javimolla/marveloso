@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - KIF (3.8.0):
+    - KIF/Core (= 3.8.0)
+  - KIF/Core (3.8.0)
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
   - SDWebImage/Core (5.10.4)
@@ -8,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - KIF
   - SDWebImage (~> 5.0)
   - Sourcery
   - SwiftyGif
@@ -15,16 +19,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KIF
     - SDWebImage
     - Sourcery
     - SwiftyGif
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  KIF: e4f9e59e48879e28e00883db063e47b40a9bb3a3
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   Sourcery: 4c6e420c227f95d566f133753a438b4ab026ced6
   SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
 
-PODFILE CHECKSUM: db5ae2464831499f1a8e687b6f325117bdad5b0f
+PODFILE CHECKSUM: 65e2c32b1dac816bdd7ff52db5bbfcbd52601ae7
 
 COCOAPODS: 1.10.0

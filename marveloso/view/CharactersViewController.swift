@@ -9,7 +9,7 @@ import UIKit
 import SwiftyGif
 
 protocol CharactersView: class {
-    func onCharactersRetrieved(_ characters: [CharacterSimple], _ total: Int)
+    func onCharactersRetrieved(_ newCharactersIndex: Int)
     func onError(_ error: String)
 }
 
@@ -19,17 +19,14 @@ class CharactersViewController: UIViewController {
     @IBOutlet weak var emptyList: UIImageView!
     let logoAnimationView = LogoAnimationView()
     var presenter: CharactersViewPresenter!
-    var characters: [CharacterSimple] = []
-    var totalCharacters: Int = 0
-    var isFetchInProgress = false
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupAnimation()
         setupSpinner()
-        setupPresenter()
         setupCharactersList()
         setupEmptyList()
+        setupPresenter()
     }
     
     private func setupAnimation() {
@@ -43,8 +40,10 @@ class CharactersViewController: UIViewController {
     }
     
     private func setupPresenter() {
-        presenter = CharactersPresenter(view: self)
-        loadCharacters()
+        if (presenter == nil) {
+            presenter = CharactersPresenter(view: self)
+            presenter.loadCharacters()
+        }
     }
     
     private func setupCharactersList() {
@@ -67,11 +66,6 @@ class CharactersViewController: UIViewController {
         spinner.startAnimating()
     }
     
-    private func loadCharacters() {
-        isFetchInProgress = true
-        presenter.loadCharacters(characters.count)
-    }
-
     private func hideAnimation() {
         logoAnimationView.isHidden = true
         spinner.isHidden = true
@@ -105,43 +99,38 @@ class CharactersViewController: UIViewController {
             self.showEmptyList()
         }))
         uialert.addAction(UIAlertAction(title: "Reintentar", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
-            if (self.totalCharacters == 0) {
-                self.showAnimation()
-            }
-            self.loadCharacters()
+            self.showAnimation()
+            self.presenter.loadCharacters()
         }))
         self.present(uialert, animated: true, completion: nil)
     }
     
-    private func calculateIndexPathsToReload(from newCharacters: [CharacterSimple]) -> [IndexPath] {
-        let startIndex = characters.count - newCharacters.count
-        let endIndex = startIndex + newCharacters.count
+    private func calculateIndexPathsToReload(from newCharactersIndex: Int) -> [IndexPath] {
+        let startIndex = presenter.getCharactersCount() - newCharactersIndex
+        let endIndex = startIndex + newCharactersIndex
         return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
     
     @IBSegueAction func showDetail(_ coder: NSCoder) -> CharacterDetailViewController? {
         let controller = CharacterDetailViewController(coder: coder)
-        controller?.id = characters[tableView.indexPathForSelectedRow?.row ?? 0].id;
+        controller?.id = presenter.getCharacter(index: tableView.indexPathForSelectedRow?.row ?? 0).id;
         return controller
     }
 
     @objc func emptyListTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        self.hideEmptyList()
-        self.showAnimation()
-        self.loadCharacters()
+        hideEmptyList()
+        showAnimation()
+        presenter.loadCharacters()
     }
 }
 
 extension CharactersViewController: CharactersView {
-    func onCharactersRetrieved(_ characters: [CharacterSimple], _ totalCharacters: Int) {
+    func onCharactersRetrieved(_ newCharactersIndex: Int) {
         DispatchQueue.main.async {
-            self.isFetchInProgress = false
-            self.characters.append(contentsOf: characters)
-            self.totalCharacters = totalCharacters
-            if (self.characters.count != characters.count) {
+            if (self.presenter.getCharactersCount() != newCharactersIndex) {
                 let indexPathsToReload = self.visibleIndexPathsToReload(
-                    intersecting: self.calculateIndexPathsToReload(from: characters))
+                    intersecting: self.calculateIndexPathsToReload(from: newCharactersIndex))
                 self.tableView.reloadRows(at: indexPathsToReload, with: .automatic)
             } else {
                 self.hideAnimation()
@@ -152,7 +141,6 @@ extension CharactersViewController: CharactersView {
     
     func onError(_ error: String) {
         DispatchQueue.main.async {
-            self.isFetchInProgress = false
             self.showError(error)
             self.hideAnimation()
         }
@@ -161,12 +149,8 @@ extension CharactersViewController: CharactersView {
 
 extension CharactersViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if (isFetchInProgress) {
-            return
-        }
-        
         if (indexPaths.contains(where: isLoadingCell)) {
-            loadCharacters()
+            presenter.loadCharacters()
         }
     }
 }
@@ -179,7 +163,7 @@ extension CharactersViewController: UITableViewDelegate {
 
 extension CharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return totalCharacters
+        return presenter != nil ? presenter.getCharactersTotal() : 0
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -188,7 +172,7 @@ extension CharactersViewController: UITableViewDataSource {
         if (isLoadingCell(for: indexPath)) {
             cell.configure(with: .none)
         } else {
-            cell.configure(with: characters[indexPath.row])
+            cell.configure(with: presenter.getCharacter(index: indexPath.row))
         }
         
         return cell
@@ -197,7 +181,7 @@ extension CharactersViewController: UITableViewDataSource {
 
 private extension CharactersViewController {
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= characters.count
+        return indexPath.row >= presenter.getCharactersCount()
     }
     
     func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
