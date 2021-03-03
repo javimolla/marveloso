@@ -20,13 +20,13 @@ class CharactersViewController: UIViewController {
     let logoAnimationView = LogoAnimationView()
     var presenter: CharactersViewPresenter!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupAnimation()
         setupSpinner()
-        setupPresenter()
         setupCharactersList()
         setupEmptyList()
+        setupPresenter()
     }
     
     private func setupAnimation() {
@@ -40,8 +40,10 @@ class CharactersViewController: UIViewController {
     }
     
     private func setupPresenter() {
-        presenter = CharactersPresenter(view: self)
-        presenter.loadCharacters()
+        if (presenter == nil) {
+            presenter = CharactersPresenter(view: self)
+            presenter.loadCharacters()
+        }
     }
     
     private func setupCharactersList() {
@@ -161,7 +163,7 @@ extension CharactersViewController: UITableViewDelegate {
 
 extension CharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getCharactersTotal()
+        return presenter != nil ? presenter.getCharactersTotal() : 0
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

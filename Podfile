@@ -20,6 +20,11 @@ target 'marveloso' do
     # Pods for testing
   end
   
+  target 'kifTests' do
+    # Pods for testing
+    pod 'KIF', :configurations => ['Debug']
+  end
+  
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|

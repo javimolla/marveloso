@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:marvelosoTests/marveloso.xctestplan"
+            reference = "container:kifTests/kifTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -58,7 +58,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7BDBA8CA25EEBB86002F0601"
+               BlueprintIdentifier = "7B325EDA25EF787200E8DFF1"
                BuildableName = "kifTests.xctest"
                BlueprintName = "kifTests"
                ReferencedContainer = "container:marveloso.xcodeproj">

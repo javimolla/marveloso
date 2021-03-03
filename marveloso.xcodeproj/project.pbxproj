@@ -17,6 +17,11 @@
 		7B0F649B25EA2B460024CAB1 /* marvelosoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */; };
 		7B1999D025ECAEF000FF6D00 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1999CF25ECAEF000FF6D00 /* CharacterDetailViewController.swift */; };
 		7B1999D225ECAEF700FF6D00 /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1999D125ECAEF600FF6D00 /* CharacterDetailPresenter.swift */; };
+		7B325EF925EF78B300E8DFF1 /* AcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B325EF625EF78B300E8DFF1 /* AcceptanceTests.swift */; };
+		7B325EFA25EF78B300E8DFF1 /* charactersViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B325EF725EF78B300E8DFF1 /* charactersViewControllerUITests.swift */; };
+		7B325EFB25EF78B300E8DFF1 /* KifExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B325EF825EF78B300E8DFF1 /* KifExtensions.swift */; };
+		7B325F1225EF8F5E00E8DFF1 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B325F1125EF8F5E00E8DFF1 /* Test.storyboard */; };
+		7B325F2825EF9B8500E8DFF1 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B325F1125EF8F5E00E8DFF1 /* Test.storyboard */; };
 		7B9D4EF025EAA6F000FA146A /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */; };
 		7B9D4EF525EAA6F900FA146A /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */; };
 		7BC8A56025EA4D86006B3C7F /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */; };
@@ -81,6 +86,7 @@
 		7BE6215925ED681700BF2BBE /* MarvelServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6215825ED681700BF2BBE /* MarvelServiceImpl.swift */; };
 		7BE6216825EE055600BF2BBE /* charactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE6216725EE055500BF2BBE /* charactersPresenterTests.swift */; };
 		8FD7ADFF309F4FF97903BCAE /* Pods_marveloso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */; };
+		A4CF7C8AE059638900927198 /* Pods_marveloso_kifTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613258EB6ED10CAC630894D4 /* Pods_marveloso_kifTests.framework */; };
 		AF88F5AAEB758BC5EA57430C /* Pods_marveloso_marvelosoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,12 +105,22 @@
 			remoteGlobalIDString = 7B0F647425EA2B430024CAB1;
 			remoteInfo = marveloso;
 		};
+		7B325EE025EF787200E8DFF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B0F646D25EA2B430024CAB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B0F647425EA2B430024CAB1;
+			remoteInfo = marveloso;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01E5348A0A5C32094E704D1C /* Pods-marveloso-kifTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-kifTests.release.xcconfig"; path = "Target Support Files/Pods-marveloso-kifTests/Pods-marveloso-kifTests.release.xcconfig"; sourceTree = "<group>"; };
 		09B8114911BFF6DC4E302E7A /* Pods-marveloso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso.release.xcconfig"; path = "Target Support Files/Pods-marveloso/Pods-marveloso.release.xcconfig"; sourceTree = "<group>"; };
 		2DF0C9893B6B269E1CC32E3D /* Pods-marveloso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso.debug.xcconfig"; path = "Target Support Files/Pods-marveloso/Pods-marveloso.debug.xcconfig"; sourceTree = "<group>"; };
+		546CCB0FB189DC5688237767 /* Pods-marveloso-kifTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marveloso-kifTests.debug.xcconfig"; path = "Target Support Files/Pods-marveloso-kifTests/Pods-marveloso-kifTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marveloso_marvelosoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		613258EB6ED10CAC630894D4 /* Pods_marveloso_kifTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marveloso_kifTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_marveloso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB1165D0E109E8DB69E834E /* Pods-marvelosoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvelosoTests.release.xcconfig"; path = "Target Support Files/Pods-marvelosoTests/Pods-marvelosoTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B0F647525EA2B430024CAB1 /* marveloso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marveloso.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +138,13 @@
 		7B0F649C25EA2B460024CAB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B1999CF25ECAEF000FF6D00 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		7B1999D125ECAEF600FF6D00 /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
+		7B325EDB25EF787200E8DFF1 /* kifTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kifTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B325EDF25EF787200E8DFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B325EF625EF78B300E8DFF1 /* AcceptanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptanceTests.swift; sourceTree = "<group>"; };
+		7B325EF725EF78B300E8DFF1 /* charactersViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = charactersViewControllerUITests.swift; sourceTree = "<group>"; };
+		7B325EF825EF78B300E8DFF1 /* KifExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KifExtensions.swift; sourceTree = "<group>"; };
+		7B325F0425EF78C300E8DFF1 /* kifTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = kifTests.xctestplan; sourceTree = "<group>"; };
+		7B325F1125EF8F5E00E8DFF1 /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		7B9D4EEF25EAA6F000FA146A /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		7B9D4EF425EAA6F900FA146A /* CharactersPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersPresenter.swift; sourceTree = "<group>"; };
 		7BC8A55E25EA4D86006B3C7F /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
@@ -217,6 +240,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B325ED825EF787200E8DFF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CF7C8AE059638900927198 /* Pods_marveloso_kifTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -226,6 +257,7 @@
 				7B0F647725EA2B430024CAB1 /* marveloso */,
 				7B0F648E25EA2B460024CAB1 /* marvelosoTests */,
 				7B0F649925EA2B460024CAB1 /* marvelosoUITests */,
+				7B325EDC25EF787200E8DFF1 /* kifTests */,
 				7B0F647625EA2B430024CAB1 /* Products */,
 				7B238E4E986B47B6CF94C7B7 /* Pods */,
 				D1D8B61D09B0C9033EA03CAB /* Frameworks */,
@@ -238,6 +270,7 @@
 				7B0F647525EA2B430024CAB1 /* marveloso.app */,
 				7B0F648B25EA2B460024CAB1 /* marvelosoTests.xctest */,
 				7B0F649625EA2B460024CAB1 /* marvelosoUITests.xctest */,
+				7B325EDB25EF787200E8DFF1 /* kifTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,8 +307,8 @@
 		7B0F649925EA2B460024CAB1 /* marvelosoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */,
 				7B0F649C25EA2B460024CAB1 /* Info.plist */,
+				7B0F649A25EA2B460024CAB1 /* marvelosoUITests.swift */,
 			);
 			path = marvelosoUITests;
 			sourceTree = "<group>";
@@ -289,8 +322,22 @@
 				A80B9D9BC442B7D89C9DE8B3 /* Pods-marveloso-marvelosoUITests.release.xcconfig */,
 				EF06E939BBC5C15011358853 /* Pods-marvelosoTests.debug.xcconfig */,
 				6CB1165D0E109E8DB69E834E /* Pods-marvelosoTests.release.xcconfig */,
+				546CCB0FB189DC5688237767 /* Pods-marveloso-kifTests.debug.xcconfig */,
+				01E5348A0A5C32094E704D1C /* Pods-marveloso-kifTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B325EDC25EF787200E8DFF1 /* kifTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B325EDF25EF787200E8DFF1 /* Info.plist */,
+				7B325F0425EF78C300E8DFF1 /* kifTests.xctestplan */,
+				7B325EF725EF78B300E8DFF1 /* charactersViewControllerUITests.swift */,
+				7B325EF625EF78B300E8DFF1 /* AcceptanceTests.swift */,
+				7B325EF825EF78B300E8DFF1 /* KifExtensions.swift */,
+			);
+			path = kifTests;
 			sourceTree = "<group>";
 		};
 		7BC8A53A25EA46F3006B3C7F /* storyboard */ = {
@@ -298,6 +345,7 @@
 			children = (
 				7B0F648325EA2B450024CAB1 /* LaunchScreen.storyboard */,
 				7B0F647E25EA2B430024CAB1 /* Main.storyboard */,
+				7B325F1125EF8F5E00E8DFF1 /* Test.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -462,6 +510,7 @@
 				6865F0ADFE748C3A0ED1ECF8 /* Pods_marveloso.framework */,
 				5D07606D7B8988C139CC33AF /* Pods_marveloso_marvelosoUITests.framework */,
 				DEBBF52DA38D7751B7097405 /* Pods_marvelosoTests.framework */,
+				613258EB6ED10CAC630894D4 /* Pods_marveloso_kifTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -528,6 +577,26 @@
 			productReference = 7B0F649625EA2B460024CAB1 /* marvelosoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7B325EDA25EF787200E8DFF1 /* kifTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B325EE425EF787200E8DFF1 /* Build configuration list for PBXNativeTarget "kifTests" */;
+			buildPhases = (
+				30B2479B0135EDDCB8BB4B3C /* [CP] Check Pods Manifest.lock */,
+				7B325ED725EF787200E8DFF1 /* Sources */,
+				7B325ED825EF787200E8DFF1 /* Frameworks */,
+				7B325ED925EF787200E8DFF1 /* Resources */,
+				1DE3A5C1E705D4A6D87EB1D8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B325EE125EF787200E8DFF1 /* PBXTargetDependency */,
+			);
+			name = kifTests;
+			productName = kifTests;
+			productReference = 7B325EDB25EF787200E8DFF1 /* kifTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -545,6 +614,10 @@
 						TestTargetID = 7B0F647425EA2B430024CAB1;
 					};
 					7B0F649525EA2B460024CAB1 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7B0F647425EA2B430024CAB1;
+					};
+					7B325EDA25EF787200E8DFF1 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 7B0F647425EA2B430024CAB1;
 					};
@@ -566,6 +639,7 @@
 				7B0F647425EA2B430024CAB1 /* marveloso */,
 				7B0F648A25EA2B460024CAB1 /* marvelosoTests */,
 				7B0F649525EA2B460024CAB1 /* marvelosoUITests */,
+				7B325EDA25EF787200E8DFF1 /* kifTests */,
 			);
 		};
 /* End PBXProject section */
@@ -575,6 +649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B325F2825EF9B8500E8DFF1 /* Test.storyboard in Resources */,
 				7B0F648525EA2B450024CAB1 /* LaunchScreen.storyboard in Resources */,
 				7B0F648225EA2B450024CAB1 /* Assets.xcassets in Resources */,
 				7BE6213125ED3C6200BF2BBE /* Marvel.gif in Resources */,
@@ -597,6 +672,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B325ED925EF787200E8DFF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B325F1225EF8F5E00E8DFF1 /* Test.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -616,6 +699,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-marveloso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DE3A5C1E705D4A6D87EB1D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso-kifTests/Pods-marveloso-kifTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-marveloso-kifTests/Pods-marveloso-kifTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-marveloso-kifTests/Pods-marveloso-kifTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B2479B0135EDDCB8BB4B3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-marveloso-kifTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -808,6 +930,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B325ED725EF787200E8DFF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B325EFB25EF78B300E8DFF1 /* KifExtensions.swift in Sources */,
+				7B325EF925EF78B300E8DFF1 /* AcceptanceTests.swift in Sources */,
+				7B325EFA25EF78B300E8DFF1 /* charactersViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -820,6 +952,11 @@
 			isa = PBXTargetDependency;
 			target = 7B0F647425EA2B430024CAB1 /* marveloso */;
 			targetProxy = 7B0F649725EA2B460024CAB1 /* PBXContainerItemProxy */;
+		};
+		7B325EE125EF787200E8DFF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B0F647425EA2B430024CAB1 /* marveloso */;
+			targetProxy = 7B325EE025EF787200E8DFF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1081,6 +1218,48 @@
 			};
 			name = Release;
 		};
+		7B325EE225EF787200E8DFF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546CCB0FB189DC5688237767 /* Pods-marveloso-kifTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kifTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.javimolla.kifTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marveloso.app/marveloso";
+			};
+			name = Debug;
+		};
+		7B325EE325EF787200E8DFF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E5348A0A5C32094E704D1C /* Pods-marveloso-kifTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = kifTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.javimolla.kifTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/marveloso.app/marveloso";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1116,6 +1295,15 @@
 			buildConfigurations = (
 				7B0F64A625EA2B460024CAB1 /* Debug */,
 				7B0F64A725EA2B460024CAB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B325EE425EF787200E8DFF1 /* Build configuration list for PBXNativeTarget "kifTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B325EE225EF787200E8DFF1 /* Debug */,
+				7B325EE325EF787200E8DFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "6F56F585-20E8-4679-8E51-1519ADD54CA5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "AcceptanceTestCase"
+      ],
+      "target" : {
+        "containerPath" : "container:marveloso.xcodeproj",
+        "identifier" : "7B325EDA25EF787200E8DFF1",
+        "name" : "kifTests"
+      }
+    }
+  ],
+  "version" : 1
+}
