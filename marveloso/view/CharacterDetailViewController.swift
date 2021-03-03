@@ -22,8 +22,8 @@ class CharacterDetailViewController: UIViewController {
     var presenter: CharacterDetailViewPresenter!
     var id: Int = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupSpinner()
         setupPresenter()
     }

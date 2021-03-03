@@ -31,24 +31,9 @@ class charactersViewControllerUITests: AcceptanceTestCase {
     }
     
     private func checkFirstCharacter(_ viewController: CharactersViewController) {
-        let cell: CharacterCellView? = tester().usingTimeout(10)
+        let cell: CharacterCellView? = tester().usingTimeout(2)
             .waitForCell(at: IndexPath(row: 0, section: 0), in: viewController.tableView) as? CharacterCellView
         XCTAssertNotNil(cell!)
         XCTAssertEqual(cell!.nameLabel.text, "name")
-    }
-}
-
-class MockMarvelService: MarvelService {
-    func getCharactersSimple(_ offset: Int,
-                             _ completion: @escaping ((_ characters: [CharacterSimple]?,
-                                                       _ totalCharacters: Int?,
-                                                       _ error: String?) -> Void)) {
-        completion([CharacterSimple(id: 1, name: "name", thumbnail: "thumbnail")], 100, nil)
-    }
-    
-    func getCharacterDetail(_ id: Int,
-                            _ completion: @escaping ((_ character: CharacterDetail?,
-                                                      _ error: String?) -> Void)) {
-        // Not used
     }
 }
