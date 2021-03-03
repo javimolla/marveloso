@@ -21,7 +21,7 @@ class charactersPresenterTests: XCTestCase {
 
     func testGetSomeCharacters() throws {
         let presenter = CharactersPresenter(view: self)
-        presenter.loadCharacters(0)
+        presenter.loadCharacters()
         wait(for: [self.expectation!], timeout: 10.0)
     }
 
@@ -34,8 +34,8 @@ class charactersPresenterTests: XCTestCase {
 }
 
 extension charactersPresenterTests: CharactersView {
-    func onCharactersRetrieved(_ characters: [CharacterSimple], _ totalCharacters: Int) {
-        XCTAssertGreaterThan(totalCharacters, characters.count)
+    func onCharactersRetrieved(_ newCharactersIndex: Int) {
+        XCTAssertGreaterThan(newCharactersIndex, 0)
         self.expectation!.fulfill()
     }
     
@@ -47,9 +47,9 @@ extension charactersPresenterTests: CharactersView {
 
 class MockMarvelService: MarvelService {
     func getCharactersSimple(_ offset: Int,
-                                      _ completion: @escaping ((_ characters: [CharacterSimple]?,
-                                                                _ totalCharacters: Int?,
-                                                                _ error: String?) -> Void)) {
+                             _ completion: @escaping ((_ characters: [CharacterSimple]?,
+                                                       _ totalCharacters: Int?,
+                                                       _ error: String?) -> Void)) {
         completion([CharacterSimple(id: 1, name: "name", thumbnail: "thumbnail")], 100, nil)
     }
     

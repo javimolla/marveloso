@@ -54,6 +54,16 @@
                ReferencedContainer = "container:marveloso.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7BDBA8CA25EEBB86002F0601"
+               BuildableName = "kifTests.xctest"
+               BlueprintName = "kifTests"
+               ReferencedContainer = "container:marveloso.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
