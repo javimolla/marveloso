@@ -29,7 +29,10 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:kifTests/kifTests.xctestplan"
+            reference = "container:kifTests/kifTests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:marvelosoTests/marveloso.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
